@@ -108,7 +108,7 @@ import os
 from io import BytesIO
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for React frontend
+CORS(app, resources={r"/*": {"origins": "https://image-vault-frontend-opal.vercel.app/"}})
 
 # Utility to hash pin (shortened)
 def pin_hash(pin):
